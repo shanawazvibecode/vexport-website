@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details | Vexport Global Agro &amp; Spices Exports</title>
+  <meta name="description" content="Detailed technical specifications, packaging formats, origin details, and container quotation for premium Indian spices, pulses, and agro produce from Vexport.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230A3622'/><text x='50%' y='68%' font-size='60' font-weight='800' fill='%23F59E0B' text-anchor='middle'>V</text></svg>">
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Core & Detail Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/product-detail.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       1. TOPBAR (Contact & Credentials)
+       ========================================================================== -->
+  <div class="vex-topbar">
+    <div class="vex-container vex-topbar-inner">
+      <div class="topbar-left">
+        <div class="topbar-item">
+          <i class="bi bi-shield-check text-warning"></i>
+          <span>APEDA &amp; Spices Board Registered Exporter</span>
+        </div>
+      </div>
+      <div class="topbar-right">
+        <div class="topbar-item">
+          <i class="bi bi-envelope"></i>
+          <a href="mailto:exports@vexport.co.in">exports@vexport.co.in</a>
+        </div>
+        <div class="topbar-divider"></div>
+        <div class="topbar-item">
+          <i class="bi bi-telephone"></i>
+          <a href="tel:+918007003698">+91 80070 03698</a>
+        </div>
+        <div class="topbar-divider"></div>
+        <div class="topbar-item">
+          <i class="bi bi-clock"></i>
+          <span>Mon – Sat, 9:00 AM – 7:00 PM IST</span>
+        </div>
+        <div class="topbar-divider"></div>
+        <div class="topbar-socials">
+          <a href="https://wa.me/918007003698" target="_blank" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+          <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          <a href="mailto:exports@vexport.co.in" aria-label="Email"><i class="bi bi-envelope-fill"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       2. STICKY SINGLE-LINE HEADER
+       ========================================================================== -->
+  <header class="vex-header" id="siteHeader">
+    <div class="vex-container vex-nav-inner">
+      <a href="index.html" class="vex-logo">
+        <div class="logo-badge">V</div>
+        <div class="logo-text-wrap">
+          <span class="logo-brand">VEXPORT<span>.CO.IN</span></span>
+          <span class="logo-tagline">Global Agro &amp; Spices</span>
+        </div>
+      </a>
+
+      <ul class="vex-nav-menu" id="vexNavMenu">
+        <li><a href="index.html#home" class="nav-link">Home</a></li>
+        <li><a href="index.html#spices" class="nav-link">Spices</a></li>
+        <li><a href="index.html#pulses" class="nav-link">Pulses &amp; Grains</a></li>
+        <li><a href="index.html#fresh-produce" class="nav-link">Fresh Produce</a></li>
+        <li><a href="index.html#categories" class="nav-link">Categories</a></li>
+        <li><a href="index.html#quality" class="nav-link">Quality</a></li>
+        <li><a href="index.html#markets" class="nav-link">Markets</a></li>
+        <li><a href="index.html#faq" class="nav-link">FAQ</a></li>
+        <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="vex-nav-actions">
+        <button type="button" class="btn-nav-rates js-open-price-drawer" data-product="All Commodities">
+          <i class="bi bi-tag-fill text-success"></i>
+          <span>Live Rates</span>
+        </button>
+        <button type="button" class="btn-nav-quote js-open-quote-modal">
+          <span>Get a Quote</span>
+          <i class="bi bi-arrow-up-right"></i>
+        </button>
+        <button type="button" class="mobile-toggle-btn" id="mobileMenuToggle" aria-label="Toggle navigation">
+          <i class="bi bi-list"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       3. BREADCRUMBS
+       ========================================================================== -->
+  <div class="pd-breadcrumb-strip">
+    <div class="vex-container">
+      <div class="breadcrumb-nav">
+        <a href="index.html">Home</a>
+        <i class="bi bi-chevron-right"></i>
+        <a href="index.html#spices">Products</a>
+        <i class="bi bi-chevron-right"></i>
+        <span class="current" id="pdBreadcrumbCurrent">Product Details</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       4. PRODUCT HERO (Interactive Gallery + Hero Info Panel)
+       ========================================================================== -->
+  <section class="pd-hero-section">
+    <div class="vex-container">
+      <div class="row gy-5 align-items-start">
+        
+        <!-- Left: Image Gallery & Thumbnail Row -->
+        <div class="col-lg-6">
+          <div class="pd-gallery-wrap">
+            <a href="javascript:void(0)" class="pd-gallery-main" id="pdMainImageLink" target="_blank" title="Inspect Full-Resolution Export Batch Photo">
+              <img src="" alt="Main Product Showcase" id="pdMainImage">
+              <span class="pd-zoom-hint"><i class="bi bi-zoom-in me-1"></i> High-Resolution Inspection</span>
+            </a>
+            <!-- Thumbnails Switcher -->
+            <div class="pd-thumb-row" id="pdThumbRow">
+              <!-- Dynamically populated by product-detail.js -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Info Panel & CTAs -->
+        <div class="col-lg-6">
+          <div class="pd-info-panel">
+            <div class="pd-badges-row">
+              <span class="pd-cat-badge" id="pdCategoryBadge"><i class="bi bi-tag"></i> Product</span>
+              <span class="pd-avail-badge" id="pdAvailBadge">Available Now</span>
+            </div>
+
+            <h1 class="pd-title" id="pdTitle">Loading Commodity...</h1>
+            <p class="pd-short-desc" id="pdShortDesc">Loading product specifications and export summary...</p>
+
+            <!-- Pricing Bar -->
+            <div class="pd-price-row">
+              <span class="pd-price-label">Pricing Status:</span>
+              <button type="button" class="btn-price-check js-price-panel-trigger" data-product="Product">
+                Check Today's Price <i class="bi bi-tag-fill ms-1"></i>
+              </button>
+            </div>
+
+            <!-- Quick Facts Grid (6-Cell Matrix) -->
+            <div class="pd-quick-facts-grid" id="pdQuickFacts">
+              <!-- Dynamically populated -->
+            </div>
+
+            <!-- Hero Action Buttons -->
+            <div class="pd-cta-group">
+              <button type="button" class="btn-pd-quote js-pd-open-quote js-open-quote-modal" data-product="Product">
+                <span>Request CIF / FOB Quote</span>
+                <i class="bi bi-arrow-up-right"></i>
+              </button>
+              <a href="#" target="_blank" class="btn-pd-whatsapp" id="pdWhatsAppBtn">
+                <i class="bi bi-whatsapp"></i>
+                <span>WhatsApp Desk</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       5. FULL TECHNICAL SPECIFICATIONS & OVERVIEW SECTION
+       ========================================================================== -->
+  <section class="pd-specs-section">
+    <div class="vex-container">
+      <div class="row gy-5">
+        
+        <!-- Left Column: Detailed Specification Table -->
+        <div class="col-lg-6">
+          <span class="eyebrow eyebrow-gold">Lab-Tested Quality</span>
+          <h2 class="mb-4">Product Specification</h2>
+          <div class="spec-table-wrap" id="pdSpecsTable">
+            <!-- Dynamically populated -->
+          </div>
+        </div>
+
+        <!-- Right Column: Commercial Overview & Farm Story -->
+        <div class="col-lg-6">
+          <span class="eyebrow eyebrow-gold">Product Overview</span>
+          <h2 class="mb-4" id="pdWhyChooseTitle">Why Buyers Choose Our Product</h2>
+          <div class="why-choose-card">
+            <div class="why-choose-text" id="pdWhyChooseBody">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       6. PACKAGING OPTIONS GRID
+       ========================================================================== -->
+  <section class="pd-packaging-section">
+    <div class="vex-container">
+      <div class="section-header">
+        <span class="eyebrow eyebrow-gold"><i class="bi bi-box-seam"></i> Export Packaging Standards</span>
+        <h2>Custom Packaging Options</h2>
+        <p class="section-subtitle">
+          Engineered for zero moisture ingress, rough ocean transit, and international supermarket shelf compliance.
+        </p>
+      </div>
+      <div class="row g-4" id="pdPackagingGrid">
+        <!-- Dynamically populated -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       7. THE VEXPORT DIFFERENCE: QUALITY & PACKHOUSE ASSURANCE
+       ========================================================================== -->
+  <section class="pd-infra-section">
+    <div class="vex-container">
+      <div class="row align-items-center gy-5">
+        <div class="col-lg-6">
+          <div class="infra-img-card">
+            <img src="assets/images/founder-inspection.jpg" alt="Vexport Packhouse Quality Inspection" loading="lazy">
+            <div class="infra-badge">
+              <i class="bi bi-award-fill text-warning me-1"></i> APEDA &amp; Spices Board Approved Packhouse
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <span class="eyebrow eyebrow-gold">The Vexport Difference</span>
+          <h2 class="mb-4">Why Buy This Product From Us</h2>
+          <div class="checklist-grid">
+            <div class="check-item">
+              <i class="bi bi-check-circle-fill"></i>
+              <div>
+                <strong>Direct Farm-Gate Procurement</strong>
+                <p>We aggregate directly from verified growers in traditional GI belts, eliminating middlemen and artificial markups.</p>
+              </div>
+            </div>
+            <div class="check-item">
+              <i class="bi bi-check-circle-fill"></i>
+              <div>
+                <strong>Stringent Lab Testing &amp; COA</strong>
+                <p>Every consignment is batch-tested for pesticide residues, aflatoxins, and active volatile oils with NABL accredited lab reports.</p>
+              </div>
+            </div>
+            <div class="check-item">
+              <i class="bi bi-check-circle-fill"></i>
+              <div>
+                <strong>Continuous Cold-Chain Reefer Monitoring</strong>
+                <p>Fresh produce and temperature-sensitive spices travel in monitored reefer containers to eliminate spoilage and condensation.</p>
+              </div>
+            </div>
+            <div class="check-item">
+              <i class="bi bi-check-circle-fill"></i>
+              <div>
+                <strong>Customized Private Labeling</strong>
+                <p>Pack size, bilingual barcode labeling, and graphic artwork customized to your destination market's legal retail standards.</p>
+              </div>
+            </div>
+            <div class="check-item">
+              <i class="bi bi-check-circle-fill"></i>
+              <div>
+                <strong>Full Statutory Compliance</strong>
+                <p>Complete set of export documents including Phytosanitary, Chamber COO, FSSAI, Spices Board, and SGS inspection certificates.</p>
+              </div>
+            </div>
+            <div class="check-item">
+              <i class="bi bi-check-circle-fill"></i>
+              <div>
+                <strong>Guaranteed Vessel Schedules</strong>
+                <p>Direct weekly sailings from JNPT (Nhava Sheva) and Mundra with prompt BL dispatch and live shipment tracking.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       8. RELATED EXPORT PRODUCTS
+       ========================================================================== -->
+  <section class="pd-related-section">
+    <div class="vex-container">
+      <div class="d-flex flex-wrap justify-content-between align-items-end mb-4 gap-3">
+        <div>
+          <span class="eyebrow eyebrow-gold">Complementary Commodities</span>
+          <h2 class="mb-0">Related Products</h2>
+        </div>
+        <a href="index.html#spices" class="btn btn-outline-primary btn-sm">
+          <span>Explore All 24+ Products</span>
+          <i class="bi bi-arrow-right"></i>
+        </a>
+      </div>
+      <div class="row g-4" id="pdRelatedRow">
+        <!-- Dynamically populated -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       9. INTERNATIONAL BUYER TESTIMONIALS
+       ========================================================================== -->
+  <section class="pd-reviews-section">
+    <div class="vex-container">
+      <div class="section-header">
+        <span class="eyebrow eyebrow-gold">Verified Buyer Reviews</span>
+        <h2>What Global Importers Say</h2>
+        <p class="section-subtitle">Read feedback from our long-term distribution partners across GCC, Europe, and Southeast Asia.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="review-card">
+            <div class="review-stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p class="review-text">
+              "We have imported multiple 40ft containers from Vexport to Jebel Ali. The quality consistency, packaging strength, and timely documentation make them our most trusted Indian agro partner."
+            </p>
+            <div class="review-author">
+              <div class="review-author-avatar">AK</div>
+              <div class="review-author-info">
+                <h6>Ajmal Khan</h6>
+                <small>🇦🇪 Managing Director, Beladi Foodstuff Trading LLC (Dubai)</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="review-card">
+            <div class="review-stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p class="review-text">
+              "The active curcumin levels and low moisture in their turmeric and black pepper consignments easily passed our strict Singapore Agri-Food lab tests on first inspection."
+            </p>
+            <div class="review-author">
+              <div class="review-author-avatar">LT</div>
+              <div class="review-author-info">
+                <h6>Logesh Tan</h6>
+                <small>🇸🇬 Procurement Head, Raj Agro Trading (Singapore)</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="review-card">
+            <div class="review-stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p class="review-text">
+              "Very transparent pricing structure with zero hidden costs. Communication is proactive throughout vessel transit, and phytosanitary clearance was seamless in Colombo."
+            </p>
+            <div class="review-author">
+              <div class="review-author-avatar">MN</div>
+              <div class="review-author-info">
+                <h6>Mohamed Nasmi</h6>
+                <small>🇱🇰 Director, Dilma Business Holdings (Sri Lanka)</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       10. PRODUCT-SPECIFIC FAQS ACCORDION
+       ========================================================================== -->
+  <section class="vex-faq-section section-padding" style="background:#FFFFFF;">
+    <div class="vex-container">
+      <div class="section-header">
+        <span class="eyebrow eyebrow-gold">Frequently Asked Questions</span>
+        <h2>Import &amp; Compliance Details</h2>
+        <p class="section-subtitle">Answers to key commercial questions regarding container loads, testing, and shipping terms.</p>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="accordion" id="pdFaqList">
+            <!-- Dynamically populated -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       11. BOTTOM ACTION STRIP
+       ========================================================================== -->
+  <section class="section-padding bg-dark text-white text-center position-relative overflow-hidden" style="background: linear-gradient(135deg, var(--primary) 0%, #062617 100%) !important;">
+    <div class="vex-container position-relative" style="z-index: 2;">
+      <span class="eyebrow eyebrow-dark mb-3"><i class="bi bi-clock-history text-warning"></i> Ready for Immediate Booking</span>
+      <h2 class="text-white mb-3" id="pdCtaTitle">Ready to Import India's Finest Commodities?</h2>
+      <p class="lead text-white-50 mx-auto mb-4" style="max-width: 680px;" id="pdCtaDesc">
+        Direct farm-gate aggregation, verified lab compliance, and guaranteed cold-chain container dispatch to global discharge ports.
+      </p>
+      <div class="d-flex justify-content-center flex-wrap gap-3">
+        <button type="button" class="btn btn-gold btn-lg js-pd-open-quote js-open-quote-modal" data-product="Product">
+          <span>Request Container Quotation</span>
+          <i class="bi bi-arrow-right"></i>
+        </button>
+        <button type="button" class="btn btn-outline-white btn-lg js-open-price-drawer" data-product="All Commodities">
+          <i class="bi bi-file-earmark-spreadsheet"></i>
+          <span>Check Today's Price Sheet</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       12. GLOBAL FOOTER
+       ========================================================================== -->
+  <footer class="vex-footer">
+    <div class="vex-container">
+      <div class="footer-top-grid">
+        <div class="footer-col-brand">
+          <a href="index.html" class="vex-logo mb-3">
+            <div class="logo-badge">V</div>
+            <div class="logo-text-wrap">
+              <span class="logo-brand text-white">VEXPORT<span>.CO.IN</span></span>
+              <span class="logo-tagline text-white-50">Global Agro &amp; Spices</span>
+            </div>
+          </a>
+          <p class="footer-about">
+            Vexport is a government-recognized Indian agro export enterprise registered with APEDA, Spices Board of India, and FSSAI. Connecting international importers to premium farm-gate agricultural wealth.
+          </p>
+          <div class="footer-cert-badges">
+            <span class="cert-pill">APEDA</span>
+            <span class="cert-pill">Spices Board</span>
+            <span class="cert-pill">FSSAI Central</span>
+            <span class="cert-pill">IEC / DGFT</span>
+            <span class="cert-pill">ISO 9001:2015</span>
+          </div>
+        </div>
+
+        <div class="footer-col-links">
+          <h5>Core Commodities</h5>
+          <ul class="footer-links">
+            <li><a href="product-detail.html?product=sangli-turmeric">Sangli Salem Turmeric</a></li>
+            <li><a href="product-detail.html?product=malabar-black-pepper">Malabar Black Pepper</a></li>
+            <li><a href="product-detail.html?product=alleppey-cardamom">Alleppey Green Cardamom</a></li>
+            <li><a href="product-detail.html?product=teja-red-chilli">Guntur Teja S17 Chilli</a></li>
+            <li><a href="product-detail.html?product=basmati-1121">1121 XXL Basmati Rice</a></li>
+            <li><a href="product-detail.html?product=nashik-red-onion">Nashik Red Onions</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col-links">
+          <h5>Buyer Desks</h5>
+          <ul class="footer-links">
+            <li><a href="index.html#router">Smart Produce Router</a></li>
+            <li><a href="index.html#quality">Phytosanitary Protocol</a></li>
+            <li><a href="index.html#markets">Global Discharge Ports</a></li>
+            <li><a href="index.html#packaging">Custom Export Packaging</a></li>
+            <li><a href="javascript:void(0)" class="js-open-price-drawer">Live Mandi Price Sheet</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col-contact">
+          <h5>Export Coordination Desk</h5>
+          <div class="footer-contact-item">
+            <i class="bi bi-geo-alt-fill text-warning"></i>
+            <span>Export Corporate Office: Nashik &amp; Mumbai, Maharashtra, India</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="bi bi-envelope-fill text-warning"></i>
+            <a href="mailto:exports@vexport.co.in">exports@vexport.co.in</a>
+          </div>
+          <div class="footer-contact-item">
+            <i class="bi bi-telephone-fill text-warning"></i>
+            <a href="tel:+918007003698">+91 80070 03698</a>
+          </div>
+          <div class="footer-contact-item">
+            <i class="bi bi-whatsapp text-success"></i>
+            <a href="https://wa.me/918007003698" target="_blank">WhatsApp Direct Desk</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Vexport Global Exports (vexport.co.in). All rights reserved. APEDA Reg. Exporter.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Export Terms &amp; Incoterms</a>
+          <a href="#">Phytosanitary Compliance</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       13. MOBILE STICKY PROCUREMENT BAR
+       ========================================================================== -->
+  <div class="pd-mobile-sticky-bar">
+    <button type="button" class="btn btn-gold flex-grow-1 js-pd-open-quote js-open-quote-modal" data-product="Product">
+      <i class="bi bi-file-earmark-text"></i> Request Quote
+    </button>
+    <a href="#" target="_blank" class="btn btn-success" id="stickyWaBtn" aria-label="WhatsApp Desk">
+      <i class="bi bi-whatsapp"></i>
+    </a>
+  </div>
+
+  <!-- ==========================================================================
+       14. SLIDE-OUT TODAY'S PRICE LIST DRAWER
+       ========================================================================== -->
+  <div class="price-drawer-backdrop" id="priceDrawerBackdrop"></div>
+  <aside class="price-drawer" id="priceDrawer">
+    <div class="drawer-head">
+      <div>
+        <h5 class="text-white mb-0"><i class="bi bi-tag-fill text-warning me-2"></i> Today's Live Mandi Rates</h5>
+        <small class="text-white-50">Direct Farm-Gate Price Ticker &bull; Oct 2026</small>
+      </div>
+      <button type="button" class="drawer-close-btn" id="priceDrawerClose"><i class="bi bi-x-lg"></i></button>
+    </div>
+    <div class="drawer-body">
+      <div class="alert alert-success d-flex align-items-center mb-3 py-2 small" role="alert">
+        <i class="bi bi-info-circle-fill me-2 fs-5"></i>
+        <div>Instant indicative FOB Nhava Sheva / Mundra pricing. Real-time rates locked upon formal Purchase Order (PO).</div>
+      </div>
+      <form class="drawer-form" id="priceRequestForm">
+        <div class="form-group">
+          <label>Target Commodity</label>
+          <input type="text" class="form-control" id="drawerCommodityInput" value="Commodity Selection" readonly>
+        </div>
+        <div class="form-group">
+          <label>Discharge Destination Port</label>
+          <input type="text" class="form-control" placeholder="e.g. Jebel Ali / Dammam / Rotterdam" required>
+        </div>
+        <div class="form-group">
+          <label>Estimated Volume</label>
+          <select class="form-control">
+            <option>1 × 20ft Container (~14-18 MT)</option>
+            <option selected>1 × 40ft High Cube Container (~26-28 MT)</option>
+            <option>Multiple Monthly Containers (Annual Contract)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Your Corporate Email</label>
+          <input type="email" class="form-control" placeholder="importer@company.com" required>
+        </div>
+        <div class="form-group">
+          <label>WhatsApp / Phone (With Country Code)</label>
+          <input type="tel" class="form-control" placeholder="+971 50 123 4567" required>
+        </div>
+        <button type="submit" class="btn btn-gold btn-full mt-2">
+          <span>Receive Full Price Sheet via WhatsApp &amp; Email</span>
+          <i class="bi bi-send-fill ms-1"></i>
+        </button>
+      </form>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       15. RFQ MODAL
+       ========================================================================== -->
+  <div class="vex-modal-backdrop" id="quoteModal">
+    <div class="vex-modal-box">
+      <div class="modal-head">
+        <div>
+          <h5 class="text-white mb-0">Request Official Container CIF / FOB Quote</h5>
+          <small class="text-white-50">Vexport Global Trade Desk &bull; Rapid 2-Hour Response</small>
+        </div>
+        <button type="button" class="btn-close btn-close-white" id="quoteModalClose"></button>
+      </div>
+      <div class="modal-body">
+        <form id="quoteModalForm">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label small fw-bold">Commodity Selected</label>
+              <input type="text" class="form-control" id="modalProductInput" value="Selected Commodity" readonly>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label small fw-bold">Discharge Port</label>
+              <input type="text" class="form-control" placeholder="e.g. Jebel Ali, Rotterdam, Singapore" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label small fw-bold">Incoterm Required</label>
+              <select class="form-select">
+                <option selected>CIF (Cost, Insurance &amp; Freight)</option>
+                <option>FOB (Free on Board - JNPT/Mundra)</option>
+                <option>CNF (Cost and Freight)</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label small fw-bold">Container Quantity</label>
+              <select class="form-select">
+                <option selected>1 Container (Trial Order)</option>
+                <option>2–5 Containers / Month</option>
+                <option>10+ Containers (Long-term Supply)</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label small fw-bold">Your Name / Company</label>
+              <input type="text" class="form-control" placeholder="Buyer Name / Trading House" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label small fw-bold">Email Address</label>
+              <input type="email" class="form-control" placeholder="buyer@company.com" required>
+            </div>
+            <div class="col-12">
+              <label class="form-label small fw-bold">WhatsApp / Contact Number</label>
+              <input type="tel" class="form-control" placeholder="+971 50 123 4567" required>
+            </div>
+            <div class="col-12">
+              <label class="form-label small fw-bold">Specific Packaging / Grading Specs</label>
+              <textarea class="form-control" rows="2" placeholder="e.g. 25kg PP bags with buyer label, fumigation required, max 10% moisture..."></textarea>
+            </div>
+            <div class="col-12 mt-3">
+              <button type="submit" class="btn btn-gold btn-full py-2">
+                <span>Submit RFQ &amp; Dispatch Proforma Estimate</span>
+                <i class="bi bi-arrow-right ms-1"></i>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Data & Application Logic -->
+  <script src="assets/js/product-data.js"></script>
+  <script src="assets/js/product-detail.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

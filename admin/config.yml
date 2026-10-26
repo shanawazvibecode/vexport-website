@@ -1,0 +1,26 @@
+backend:
+  name: github
+  repo: shanawazvibecode/vexport-website
+  branch: main
+
+media_folder: "assets/images"
+public_folder: "assets/images"
+
+collections:
+  - name: "products"
+    label: "Export Products"
+    folder: "content/products"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Product Name", name: "title", widget: "string" }
+      - { label: "Category", name: "category", widget: "select", options: ["Indian Spices", "Pulses & Grains", "Fresh Produce", "Value-Added Commodities"] }
+      - { label: "Badge / Quality Tier", name: "badge", widget: "string", default: "Export Grade Sortex" }
+      - { label: "Availability", name: "availability", widget: "string", default: "Available Now" }
+      - { label: "HS Code", name: "hsCode", widget: "string" }
+      - { label: "Origin Region", name: "origin", widget: "string" }
+      - { label: "Container MOQ", name: "moq", widget: "string", default: "1 Container (14-20 MT)" }
+      - { label: "Harvest Season", name: "season", widget: "string" }
+      - { label: "Packaging Standard", name: "packaging", widget: "string" }
+      - { label: "Featured Image", name: "thumbnail", widget: "image" }
+      - { label: "Technical Description", name: "body", widget: "markdown" }

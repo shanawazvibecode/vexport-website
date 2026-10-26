@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vexport Management Studio | Visual Admin CMS</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230A3622'/><text x='50%' y='68%' font-size='60' font-weight='800' fill='%23F59E0B' text-anchor='middle'>V</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0A3622;
+      --primary-dark: #062316;
+      --accent: #F59E0B;
+      --accent-hover: #D97706;
+      --bg-dark: #0f172a;
+      --bg-surface: #ffffff;
+      --border-color: #e2e8f0;
+      --text-main: #1e293b;
+      --text-muted: #64748b;
+    }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #f8fafc;
+      color: var(--text-main);
+      min-height: 100vh;
+    }
+    .admin-navbar {
+      background: var(--primary);
+      padding: 0.85rem 1.5rem;
+      border-bottom: 3px solid var(--accent);
+      color: #fff;
+    }
+    .brand-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+    }
+    .brand-badge {
+      background: var(--accent);
+      color: #000;
+      font-size: 0.7rem;
+      font-weight: 800;
+      padding: 0.2rem 0.55rem;
+      border-radius: 4px;
+      margin-left: 0.5rem;
+      text-transform: uppercase;
+    }
+    .admin-sidebar {
+      background: #ffffff;
+      border-right: 1px solid var(--border-color);
+      min-height: calc(100vh - 65px);
+      padding: 1.5rem 1rem;
+    }
+    .sidebar-nav-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.75rem 1rem;
+      border-radius: 8px;
+      color: var(--text-main);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.92rem;
+      margin-bottom: 0.4rem;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+    .sidebar-nav-item:hover, .sidebar-nav-item.active {
+      background: #ecfdf5;
+      color: var(--primary);
+    }
+    .sidebar-nav-item i {
+      font-size: 1.15rem;
+      color: var(--accent);
+    }
+    .stat-card {
+      background: #fff;
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    }
+    .stat-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+    }
+    .table-container {
+      background: #fff;
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    }
+    .table-product-thumb {
+      width: 44px;
+      height: 44px;
+      object-fit: cover;
+      border-radius: 6px;
+      border: 1px solid #e2e8f0;
+    }
+    .btn-gold {
+      background: var(--accent);
+      color: #000;
+      font-weight: 700;
+      border: none;
+    }
+    .btn-gold:hover {
+      background: var(--accent-hover);
+      color: #000;
+    }
+    .btn-emerald {
+      background: var(--primary);
+      color: #fff;
+      font-weight: 600;
+      border: none;
+    }
+    .btn-emerald:hover {
+      background: var(--primary-dark);
+      color: #fff;
+    }
+    .badge-category {
+      background: #e0f2fe;
+      color: #0369a1;
+      font-weight: 600;
+      font-size: 0.75rem;
+      padding: 0.3rem 0.6rem;
+      border-radius: 6px;
+    }
+    .toast-sync {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 9999;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <header class="admin-navbar d-flex justify-content-between align-items-center">
+    <div class="d-flex align-items-center">
+      <span class="brand-title">VEXPORT<span style="color:var(--accent);">.CO.IN</span></span>
+      <span class="brand-badge">Visual Admin CMS</span>
+    </div>
+    <div class="d-flex align-items-center gap-3">
+      <a href="../index.html" target="_blank" class="btn btn-sm btn-outline-light d-flex align-items-center gap-1">
+        <i class="bi bi-box-arrow-up-right"></i> View Live Site
+      </a>
+      <button type="button" class="btn btn-sm btn-gold d-flex align-items-center gap-1" id="btnExportChanges">
+        <i class="bi bi-cloud-arrow-down-fill"></i> Export / Download Data
+      </button>
+      <button type="button" class="btn btn-sm btn-light d-flex align-items-center gap-1" data-bs-toggle="modal" data-bs-target="#githubSyncModal">
+        <i class="bi bi-github"></i> GitHub Sync
+      </button>
+    </div>
+  </header>
+
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Left Sidebar -->
+      <aside class="col-md-3 col-lg-2 admin-sidebar">
+        <div class="small fw-bold text-uppercase text-muted px-3 mb-2" style="font-size: 0.7rem;">Catalog Management</div>
+        <div class="sidebar-nav-item active" onclick="switchTab('products')">
+          <i class="bi bi-boxes"></i> <span>All Products</span>
+        </div>
+        <div class="sidebar-nav-item" onclick="openProductModal('add')">
+          <i class="bi bi-plus-circle-fill"></i> <span>Add New Product</span>
+        </div>
+
+        <div class="small fw-bold text-uppercase text-muted px-3 mt-4 mb-2" style="font-size: 0.7rem;">Website Settings</div>
+        <div class="sidebar-nav-item" onclick="switchTab('contact')">
+          <i class="bi bi-telephone-inbound"></i> <span>Contact & Desk Info</span>
+        </div>
+        <div class="sidebar-nav-item" onclick="switchTab('mandi')">
+          <i class="bi bi-tag-fill"></i> <span>Live Price Ticker</span>
+        </div>
+        <div class="sidebar-nav-item" onclick="switchTab('help')">
+          <i class="bi bi-question-circle"></i> <span>Team Guide & FAQ</span>
+        </div>
+
+        <div class="alert alert-info mt-4 p-2 small border-0" style="background:#f0fdf4; border:1px solid #bbf7d0!important; color:#166534;">
+          <i class="bi bi-shield-check text-success me-1"></i>
+          <strong>Non-Technical Ready:</strong> Any team member can edit without touching HTML or CSS!
+        </div>
+      </aside>
+
+      <!-- Main Content Area -->
+      <main class="col-md-9 col-lg-10 p-4">
+        
+        <!-- SECTION 1: PRODUCTS TAB -->
+        <div id="tab-products">
+          <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+            <div>
+              <h3 class="fw-bold mb-1">Product Export Catalog</h3>
+              <p class="text-muted small mb-0">Manage technical specs, harvest origins, packaging, HS codes, and container MOQs.</p>
+            </div>
+            <div class="d-flex gap-2">
+              <input type="text" id="adminSearchInput" class="form-control form-control-sm" placeholder="Search product or HS code..." style="width: 250px;">
+              <button class="btn btn-emerald btn-sm d-flex align-items-center gap-1" onclick="openProductModal('add')">
+                <i class="bi bi-plus-lg"></i> Add New Product
+              </button>
+            </div>
+          </div>
+
+          <!-- Quick Stats Row -->
+          <div class="row g-3 mb-4">
+            <div class="col-sm-6 col-lg-3">
+              <div class="stat-card">
+                <div class="stat-icon bg-success bg-opacity-10 text-success"><i class="bi bi-box-seam-fill"></i></div>
+                <div>
+                  <div class="text-muted small">Total Products</div>
+                  <h4 class="fw-bold mb-0" id="statTotalProducts">--</h4>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+              <div class="stat-card">
+                <div class="stat-icon bg-warning bg-opacity-10 text-warning"><i class="bi bi-fire"></i></div>
+                <div>
+                  <div class="text-muted small">Indian Spices</div>
+                  <h4 class="fw-bold mb-0" id="statSpicesCount">--</h4>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+              <div class="stat-card">
+                <div class="stat-icon bg-primary bg-opacity-10 text-primary"><i class="bi bi-flower1"></i></div>
+                <div>
+                  <div class="text-muted small">Pulses & Grains</div>
+                  <h4 class="fw-bold mb-0" id="statPulsesCount">--</h4>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+              <div class="stat-card">
+                <div class="stat-icon bg-danger bg-opacity-10 text-danger"><i class="bi bi-snow"></i></div>
+                <div>
+                  <div class="text-muted small">Fresh & Cold Chain</div>
+                  <h4 class="fw-bold mb-0" id="statFreshCount">--</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Products Table -->
+          <div class="table-container">
+            <table class="table table-hover align-middle mb-0">
+              <thead class="table-light">
+                <tr>
+                  <th style="width: 60px;">Image</th>
+                  <th>Product Name</th>
+                  <th>Category</th>
+                  <th>Export Origin</th>
+                  <th>Container MOQ</th>
+                  <th>HS Code</th>
+                  <th class="text-end" style="width: 170px;">Actions</th>
+                </tr>
+              </thead>
+              <tbody id="adminProductsTableBody">
+                <!-- Dynamically populated via admin.js -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- SECTION 2: CONTACT & DESK SETTINGS -->
+        <div id="tab-contact" style="display: none;">
+          <div class="mb-4">
+            <h3 class="fw-bold mb-1">Company Contact & Desk Information</h3>
+            <p class="text-muted small mb-0">Update contact numbers, WhatsApp numbers, email addresses, and headquarters location.</p>
+          </div>
+
+          <div class="card p-4 border-0 shadow-sm" style="max-width: 800px;">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label fw-bold small">Official WhatsApp Number (With Country Code)</label>
+                <input type="text" id="cfgWhatsApp" class="form-control" value="918007003698">
+                <small class="text-muted">Used for 1-click WhatsApp customer chats.</small>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label fw-bold small">Direct Phone Number</label>
+                <input type="text" id="cfgPhone" class="form-control" value="+91 80070 03698">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label fw-bold small">Corporate Export Email</label>
+                <input type="email" id="cfgEmail" class="form-control" value="exports@vexport.co.in">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label fw-bold small">Operating Hours</label>
+                <input type="text" id="cfgHours" class="form-control" value="Mon – Sat, 9:00 AM – 7:00 PM IST">
+              </div>
+              <div class="col-12">
+                <label class="form-label fw-bold small">Packhouse / Office Address</label>
+                <textarea id="cfgAddress" class="form-control" rows="2">Makhamalabad, Panchvati, Nashik, Maharashtra 422003, India</textarea>
+              </div>
+              <div class="col-12 mt-3">
+                <button type="button" class="btn btn-emerald" onclick="saveCompanySettings()">
+                  <i class="bi bi-check2-circle"></i> Save Contact Settings
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 3: MANDI TICKER SETTINGS -->
+        <div id="tab-mandi" style="display: none;">
+          <div class="mb-4">
+            <h3 class="fw-bold mb-1">Live Mandi Price Ticker & Indications</h3>
+            <p class="text-muted small mb-0">Manage the price estimates displayed in the slide-out rate calculator drawer.</p>
+          </div>
+          <div class="card p-4 border-0 shadow-sm" style="max-width: 800px;">
+            <div class="alert alert-warning small">
+              <i class="bi bi-info-circle-fill me-1"></i> These rates help provide indicative instant ranges to international buyers before formal Purchase Orders are locked.
+            </div>
+            <div class="table-responsive">
+              <table class="table align-middle">
+                <thead>
+                  <tr>
+                    <th>Commodity</th>
+                    <th>Benchmark Mandi</th>
+                    <th>Indicative Range (FOB JNPT / Nhava Sheva)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Sangli Salem Turmeric</td>
+                    <td>Sangli Mandi</td>
+                    <td><input type="text" class="form-control form-control-sm" value="$1,350 - $1,550 / MT"></td>
+                  </tr>
+                  <tr>
+                    <td>Malabar Black Pepper (550GL)</td>
+                    <td>Kochi Terminal</td>
+                    <td><input type="text" class="form-control form-control-sm" value="$6,800 - $7,200 / MT"></td>
+                  </tr>
+                  <tr>
+                    <td>1121 XXL Basmati Rice</td>
+                    <td>Punjab / Haryana Belt</td>
+                    <td><input type="text" class="form-control form-control-sm" value="$1,050 - $1,180 / MT"></td>
+                  </tr>
+                  <tr>
+                    <td>Nashik Red Onions (55mm+)</td>
+                    <td>Lasalgaon Mandi</td>
+                    <td><input type="text" class="form-control form-control-sm" value="$320 - $380 / MT"></td>
+                  </tr>
+                </tbody>
+              </table>
+              <button class="btn btn-emerald btn-sm" onclick="showToast('Live Mandi price settings saved successfully!')">
+                <i class="bi bi-save"></i> Update Rate Sheet
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 4: TEAM GUIDE & INSTRUCTIONS -->
+        <div id="tab-help" style="display: none;">
+          <div class="mb-4">
+            <h3 class="fw-bold mb-1">Team Member Collaboration Guide</h3>
+            <p class="text-muted small mb-0">How any non-technical team member can add or edit website information.</p>
+          </div>
+          <div class="row g-4" style="max-width: 950px;">
+            <div class="col-md-6">
+              <div class="card p-4 border-0 shadow-sm h-100">
+                <h5 class="fw-bold text-success"><i class="bi bi-1-circle-fill me-2"></i> How to Add a New Product</h5>
+                <ol class="small text-muted ps-3 mt-2 lh-lg">
+                  <li>Click <b>"Add New Product"</b> button on the top right.</li>
+                  <li>Fill in Product Name (e.g. <i>Kashmiri Saffron</i> or <i>White Sesame Seeds</i>).</li>
+                  <li>Select Category (Spices, Pulses, or Fresh Produce).</li>
+                  <li>Enter MOQ (e.g. <i>1 FCL 20ft Container</i>) and HS Code.</li>
+                  <li>Add image path (e.g. <code>assets/images/new-product.jpg</code>).</li>
+                  <li>Click <b>"Save Product"</b>. It will appear immediately in the catalog!</li>
+                </ol>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card p-4 border-0 shadow-sm h-100">
+                <h5 class="fw-bold text-primary"><i class="bi bi-2-circle-fill me-2"></i> How to Publish to the Live Website</h5>
+                <ol class="small text-muted ps-3 mt-2 lh-lg">
+                  <li>After editing products, click <b>"GitHub Sync"</b> at the top.</li>
+                  <li>If you connected your GitHub account or Personal Access Token, click <b>"Push to Live"</b>.</li>
+                  <li>Alternatively, click <b>"Export / Download Data"</b> and save the file into <code>assets/js/product-data.js</code>.</li>
+                  <li>Once connected to Vercel, any GitHub push goes live worldwide in under 15 seconds!</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+  <!-- ADD / EDIT PRODUCT MODAL -->
+  <div class="modal fade" id="productModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header bg-dark text-white">
+          <h5 class="modal-title" id="productModalTitle"><i class="bi bi-pencil-square text-warning me-2"></i> Edit Product</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-4">
+          <form id="productEditForm">
+            <input type="hidden" id="editProductId">
+            <div class="row g-3">
+              <div class="col-md-8">
+                <label class="form-label fw-bold small">Product Name *</label>
+                <input type="text" id="editName" class="form-control" required placeholder="e.g. Malabar Black Pepper">
+              </div>
+              <div class="col-md-4">
+                <label class="form-label fw-bold small">Category *</label>
+                <select id="editCategory" class="form-select">
+                  <option value="Indian Spices">Indian Spices</option>
+                  <option value="Pulses & Grains">Pulses & Grains</option>
+                  <option value="Fresh Produce">Fresh Produce</option>
+                  <option value="Value-Added Commodities">Value-Added Commodities</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label fw-bold small">Badge / Status</label>
+                <input type="text" id="editBadge" class="form-control" placeholder="e.g. Top Export GI Belt or 550 GL Grade">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label fw-bold small">Availability</label>
+                <input type="text" id="editAvailability" class="form-control" value="Available Now">
+              </div>
+              <div class="col-12">
+                <label class="form-label fw-bold small">Short Export Description *</label>
+                <textarea id="editShortDesc" class="form-control" rows="2" placeholder="Brief technical summary for buyers..."></textarea>
+              </div>
+              <div class="col-md-4">
+                <label class="form-label fw-bold small">Origin Belt</label>
+                <input type="text" id="editOrigin" class="form-control" placeholder="e.g. Sangli, Maharashtra">
+              </div>
+              <div class="col-md-4">
+                <label class="form-label fw-bold small">Export HS Code</label>
+                <input type="text" id="editHsCode" class="form-control" placeholder="e.g. 0904 11 30">
+              </div>
+              <div class="col-md-4">
+                <label class="form-label fw-bold small">Container MOQ</label>
+                <input type="text" id="editMoq" class="form-control" placeholder="e.g. 1 Container (14 MT)">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label fw-bold small">Harvest Season</label>
+                <input type="text" id="editSeason" class="form-control" placeholder="e.g. Dec to March (Year-Round)">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label fw-bold small">Primary Packaging</label>
+                <input type="text" id="editPackaging" class="form-control" placeholder="e.g. 25kg / 50kg PP Woven Bags">
+              </div>
+              <div class="col-12">
+                <label class="form-label fw-bold small">Product Image Path / URL</label>
+                <input type="text" id="editImage" class="form-control" placeholder="assets/images/filename.jpg">
+                <small class="text-muted">Place photo in <code>assets/images/</code> or paste image link.</small>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer bg-light">
+          <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-emerald btn-sm" onclick="saveProductFromModal()">
+            <i class="bi bi-check-lg"></i> Save Product Changes
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GITHUB SYNC MODAL -->
+  <div class="modal fade" id="githubSyncModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-dark text-white">
+          <h5 class="modal-title"><i class="bi bi-github me-2"></i> GitHub Repository Sync</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-4">
+          <p class="small text-muted">
+            This website is linked to your GitHub repository: <b>shanawazvibecode/vexport-website</b>.
+          </p>
+          <div class="mb-3">
+            <label class="form-label fw-bold small">Repository</label>
+            <input type="text" class="form-control form-control-sm" value="shanawazvibecode/vexport-website" readonly>
+          </div>
+          <div class="mb-3">
+            <label class="form-label fw-bold small">Target Branch</label>
+            <input type="text" class="form-control form-control-sm" value="main" readonly>
+          </div>
+          <div class="alert alert-success small mb-0">
+            <i class="bi bi-check-circle-fill text-success me-1"></i>
+            <b>Automatic CI/CD:</b> Any commit to this repo will immediately update your live website once connected to Vercel or Cloudflare!
+          </div>
+        </div>
+        <div class="modal-footer bg-light">
+          <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+          <a href="https://github.com/shanawazvibecode/vexport-website" target="_blank" class="btn btn-dark btn-sm">
+            <i class="bi bi-box-arrow-up-right"></i> Open on GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Container -->
+  <div class="toast-container toast-sync" id="toastContainer"></div>
+
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Master Product Database Reference -->
+  <script src="../assets/js/product-data.js"></script>
+  <!-- Admin Controller Logic -->
+  <script src="admin.js"></script>
+</body>
+</html>
