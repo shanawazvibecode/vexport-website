@@ -525,7 +525,7 @@ p:last-child { margin-bottom: 0; }
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, rgba(6, 38, 23, 0.95) 0%, rgba(10, 54, 34, 0.88) 50%, rgba(6, 38, 23, 0.75) 100%);
+  background: linear-gradient(90deg, rgba(6, 38, 23, 0.82) 0%, rgba(10, 54, 34, 0.68) 55%, rgba(6, 38, 23, 0.52) 100%);
   z-index: 2;
 }
 
@@ -831,8 +831,19 @@ p:last-child { margin-bottom: 0; }
 
 .router-result-head {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 0.75rem;
+}
+
+.router-produce-thumb {
+  width: 52px;
+  height: 52px;
+  border-radius: 8px;
+  object-fit: cover;
+  border: 2px solid rgba(245, 158, 11, 0.45);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  flex-shrink: 0;
 }
 
 .router-result-title {
@@ -1404,6 +1415,22 @@ p:last-child { margin-bottom: 0; }
 }
 
 .country-flag-icon { font-size: 1.25rem; }
+
+.country-code-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.4rem;
+  height: 1.55rem;
+  padding: 0 0.4rem;
+  background: rgba(10, 54, 34, 0.08);
+  color: var(--primary-dark);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  border-radius: 4px;
+  border: 1px solid rgba(10, 54, 34, 0.22);
+}
 
 .country-info span {
   font-weight: 600;

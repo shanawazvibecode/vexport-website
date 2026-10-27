@@ -165,6 +165,18 @@ function initSmartRouter() {
       <div><strong>Transit Time to Port:</strong> ${transit}</div>
     `;
 
+    const commodityThumb = document.getElementById('routerProduceThumb');
+    const COMMODITY_IMAGES = {
+      spices: "assets/images/turmeric.jpg",
+      pulses: "assets/images/basmati-rice.jpg",
+      onions: "assets/images/onion.jpg",
+      fruits: "assets/images/pomegranate.jpg"
+    };
+    if (commodityThumb) {
+      commodityThumb.src = COMMODITY_IMAGES[currentCategory] || 'assets/images/turmeric.jpg';
+      commodityThumb.alt = data.title;
+    }
+
     resultCta.onclick = () => {
       openPriceDrawerWithProduct(data.title);
     };
@@ -410,7 +422,7 @@ const COMMODITY_SPEC_DATABASE = {
     moisture: "Max 11.0%",
     foreignMatter: "Max 0.2% Machine Cleaned",
     packaging: "25kg / 50kg Heavy-duty Jute or Craft Paper Bags",
-    moq: "Air: 1 MT / Sea: 1 × 20ft (15 MT)",
+    moq: "Air: 1 MT / Sea: 1 x 20ft (15 MT)",
     certifications: "Spices Board of India, APEDA, ISO 9001:2015"
   },
   "alleppey-cardamom": {
@@ -432,7 +444,7 @@ const COMMODITY_SPEC_DATABASE = {
     moisture: "Max 10.0% to 11.0%",
     foreignMatter: "Max 1.0% (Available Stemless & With Stem)",
     packaging: "25kg / 50kg Gunny Bags or Pressed Bales",
-    moq: "1 × 40ft High Cube Container (14 MT Bales / 12 MT Bags)",
+    moq: "1 x 40ft High Cube Container (14 MT Bales / 12 MT Bags)",
     certifications: "Spices Board, APEDA, SGS Pre-shipment inspected"
   },
   "cumin-seeds": {
@@ -443,7 +455,7 @@ const COMMODITY_SPEC_DATABASE = {
     moisture: "Max 8.5%",
     foreignMatter: "Max 0.5%",
     packaging: "25kg / 50kg PP Bags or Eco Jute Bags",
-    moq: "1 × 20ft Container (13 MT)",
+    moq: "1 x 20ft Container (13 MT)",
     certifications: "Spices Board, FSSAI, US FDA Lab Tested"
   },
   "basmati-1121": {
@@ -454,7 +466,7 @@ const COMMODITY_SPEC_DATABASE = {
     moisture: "Max 12.0%",
     foreignMatter: "100% Sortex Cleaned, Chalky Grain < 1%",
     packaging: "5kg, 10kg, 20kg, 40kg, 50kg BOPP / Non-Woven / Jute Bags",
-    moq: "1 × 20ft Container (25 to 26 MT)",
+    moq: "1 x 20ft Container (25 to 26 MT)",
     certifications: "APEDA, FSSAI, Export Inspection Agency (EIA)"
   },
   "kabuli-chickpeas": {
@@ -465,7 +477,7 @@ const COMMODITY_SPEC_DATABASE = {
     moisture: "Max 10.0% to 11.0%",
     foreignMatter: "Max 0.2% Machine Cleaned & Machine Graded",
     packaging: "25kg / 50kg Poly-lined Woven Bags",
-    moq: "1 × 20ft Container (24 MT)",
+    moq: "1 x 20ft Container (24 MT)",
     certifications: "APEDA, FSSAI, Phytosanitary Certificate Issued"
   },
   "nashik-red-onion": {
@@ -476,7 +488,7 @@ const COMMODITY_SPEC_DATABASE = {
     moisture: "Air-cured with intact dark outer skins",
     foreignMatter: "Zero Soil / 100% Sorted Bulbs",
     packaging: "5kg, 10kg, 25kg, 50kg Red Mesh Ventilated Bags",
-    moq: "1 × 40ft Reefer Container (29 MT)",
+    moq: "1 x 40ft Reefer Container (29 MT)",
     certifications: "APEDA, FSSAI, DGFT, Plant Quarantine Issued"
   },
   "bhagwa-pomegranate": {
@@ -487,7 +499,7 @@ const COMMODITY_SPEC_DATABASE = {
     moisture: "Fruit weight: 200g - 250g / 250g - 300g (Grade A)",
     foreignMatter: "Zero pesticide residue, Global G.A.P. compliant",
     packaging: "3.5kg / 4kg CFB Cartons with Plastic Punnets",
-    moq: "1 × 40ft Reefer Container (12 to 14 MT)",
+    moq: "1 x 40ft Reefer Container (12 to 14 MT)",
     certifications: "APEDA, Global G.A.P., FSSAI"
   }
 };

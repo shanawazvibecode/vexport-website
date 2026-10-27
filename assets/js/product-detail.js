@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (mainImg) {
     mainImg.src = p.mainImage;
-    mainImg.alt = `${p.name} — Vexport Commercial Export Image`;
+    mainImg.alt = `${p.name} - Vexport Commercial Export Image`;
   }
   if (mainImgLink) {
     mainImgLink.href = p.mainImage;

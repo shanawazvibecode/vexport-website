@@ -24,7 +24,7 @@ const VEXPORT_PRODUCTS_DATA = {
       origin: "Sangli & Salem (Maharashtra / Tamil Nadu)",
       moq: "1 Container (14 Metric Tons)",
       hsCode: "0910 30 10 / 0910 30 20",
-      season: "Year-Round Supply (Fresh Harvest: Jan–Apr)",
+      season: "Year-Round Supply (Fresh Harvest: Jan-Apr)",
       packaging: "25kg / 50kg PP Woven or Multi-wall Paper Bags"
     },
     fullSpecs: [
@@ -40,12 +40,12 @@ const VEXPORT_PRODUCTS_DATA = {
       { label: "Purity & Cleanliness", value: "99.5% Free from Salmonella & E. Coli" },
       { label: "Pesticide Residue", value: "Compliant with EU / FDA / Codex MRLs" },
       { label: "Shelf Life", value: "24 Months in cool dry storage" },
-      { label: "Discharge Ports Served", value: "🇦🇪 Jebel Ali, 🇸🇦 Dammam/Jeddah, 🇺🇸 Port of NY, 🇳🇱 Rotterdam, 🇬🇧 Felixstowe, 🇸🇬 Singapore" }
+      { label: "Discharge Ports Served", value: "Jebel Ali (UAE), Dammam / Jeddah (Saudi Arabia), Port of New York (USA), Rotterdam (Netherlands), Felixstowe (UK), Singapore" }
     ],
     whyChoose: `
       <p>Vexport operates direct farm aggregation desks in Sangli and Salem, eliminating intermediaries and ensuring pure, unadulterated turmeric with verified active curcumin content.</p>
       <p>Every export consignment undergoes batch-level spectrophotometric testing at NABL-accredited and Spices Board laboratories to verify zero artificial lead chromate coloring, compliant Sudan dye status, and minimal moisture.</p>
-      <p>Whether you require unpolished mother fingers for pharmaceutical extraction, double-polished fingers for retail grinding, or 80–100 mesh sterilized powder for culinary brands, we package to international food standards with custom palletization and fumigation certification.</p>
+      <p>Whether you require unpolished mother fingers for pharmaceutical extraction, double-polished fingers for retail grinding, or 80-100 mesh sterilized powder for culinary brands, we package to international food standards with custom palletization and fumigation certification.</p>
     `,
     packagingOptions: [
       { name: "25kg PP Woven Bags", desc: "Food-grade inner liner, anti-moisture", icon: "bi-bag-check" },
@@ -56,8 +56,8 @@ const VEXPORT_PRODUCTS_DATA = {
       { name: "Palletized Containerization", desc: "ISPM-15 treated wooden heat-treated pallets", icon: "bi-grid-3x3-gap" }
     ],
     faqs: [
-      { q: "What curcumin percentages can Vexport supply?", a: "We supply graded turmeric fingers and powder ranging from standard commercial 3.0%–3.5% up to premium grade 4.5%–5.5% active curcumin, accompanied by third-party NABL lab reports." },
-      { q: "Can we request a pre-shipment sample?", a: "Yes. We dispatch 250g–500g DHL/FedEx lab testing samples with active Certificate of Analysis (COA) to verified corporate buyers." },
+      { q: "What curcumin percentages can Vexport supply?", a: "We supply graded turmeric fingers and powder ranging from standard commercial 3.0%-3.5% up to premium grade 4.5%-5.5% active curcumin, accompanied by third-party NABL lab reports." },
+      { q: "Can we request a pre-shipment sample?", a: "Yes. We dispatch 250g-500g DHL/FedEx lab testing samples with active Certificate of Analysis (COA) to verified corporate buyers." },
       { q: "How many metric tons fit in a 20ft and 40ft container?", a: "A standard 20ft FCL accommodates approximately 14 to 15 MT of turmeric fingers in 25kg/50kg bags. Turmeric powder can be loaded up to 18 MT." },
       { q: "What export documentation is provided with every shipment?", a: "Commercial Invoice, Packing List, Bill of Lading (Clean on Board), Certificate of Origin (Chamber of Commerce / COO), Spices Board Inspection, Phytosanitary Certificate, and SGS / Geo-Chem Quality Certificate." }
     ],
@@ -84,7 +84,7 @@ const VEXPORT_PRODUCTS_DATA = {
       origin: "Wayanad & Idukki (Kerala)",
       moq: "1 Container (15 Metric Tons)",
       hsCode: "0904 11 10 / 0904 11 20",
-      season: "Peak Season: Dec–Apr (Available Year-Round)",
+      season: "Peak Season: Dec-Apr (Available Year-Round)",
       packaging: "25kg / 50kg Jute Gunny or Multi-wall Bags"
     },
     fullSpecs: [
@@ -98,7 +98,7 @@ const VEXPORT_PRODUCTS_DATA = {
       { label: "Purity Grade", value: "ASTA / FAQ Clean Grade" },
       { label: "Microbiological Safety", value: "Steam Sterilized / ETO Treated on request" },
       { label: "Shelf Life", value: "24 Months in dry warehouse" },
-      { label: "Major Ports Served", value: "🇦🇪 Jebel Ali, 🇸🇬 Port of Singapore, 🇺🇸 New York, 🇩🇪 Hamburg, 🇬🇧 London Gateway" }
+      { label: "Major Ports Served", value: "Jebel Ali (UAE), Port of Singapore, New York (USA), Hamburg (Germany), London Gateway (UK)" }
     ],
     whyChoose: `
       <p>Harvested on the misty mountain slopes of Kerala's Western Ghats, Malabar black pepper is celebrated across global spice mills for its balanced piperine kick and dense aromatic volatile oils.</p>
@@ -108,13 +108,13 @@ const VEXPORT_PRODUCTS_DATA = {
     packagingOptions: [
       { name: "25kg Multi-wall Paper Bags", desc: "Hermetically sealed for essential oil protection", icon: "bi-box-seam" },
       { name: "50kg High-Density Jute Bags", desc: "Heavy-duty export gunny with internal food liner", icon: "bi-bag" },
-      { name: "Vacuum Brick Packs (5kg–10kg)", desc: "Maximum aroma preservation for gourmet repackers", icon: "bi-bag-check" },
+      { name: "Vacuum Brick Packs (5kg-10kg)", desc: "Maximum aroma preservation for gourmet repackers", icon: "bi-bag-check" },
       { name: "Private Label Whole/Cracked", desc: "Pet jars, grinders and custom pouches", icon: "bi-tags" }
     ],
     faqs: [
       { q: "What bulk densities do you supply?", a: "We primarily export 550 GL (Garbled 1) and 580 GL (Tellicherry Bold Grade). Custom densities up to 600 GL can be supplied upon seasonal pre-booking." },
       { q: "Do you supply steam-sterilized pepper?", a: "Yes, we provide validated continuous steam-sterilized black pepper ensuring complete eradication of Salmonella and microbial load under 5,000 CFU/g for US/EU processors." },
-      { q: "What is the transit time to Middle East & Europe?", a: "Direct sea vessels from JNPT / Cochin reach Jebel Ali in 4–5 days and Rotterdam/Hamburg in 18–22 days." }
+      { q: "What is the transit time to Middle East & Europe?", a: "Direct sea vessels from JNPT / Cochin reach Jebel Ali in 4-5 days and Rotterdam/Hamburg in 18-22 days." }
     ],
     related: ["sangli-turmeric", "alleppey-cardamom", "cloves", "star-anise"]
   },
@@ -139,7 +139,7 @@ const VEXPORT_PRODUCTS_DATA = {
       origin: "Idukki & Alleppey (Kerala)",
       moq: "Air: 500kg / Sea: 2 Metric Tons",
       hsCode: "0908 31 10 / 0908 31 20",
-      season: "Aug–Feb (Peak Fresh Crop)",
+      season: "Aug-Feb (Peak Fresh Crop)",
       packaging: "5kg / 10kg Master Cartons with Vacuum Inner Bags"
     },
     fullSpecs: [
@@ -152,12 +152,12 @@ const VEXPORT_PRODUCTS_DATA = {
       { label: "Bulk Density", value: "400 to 430 g/L" },
       { label: "Purity", value: "99.5% Sortex Hand-Picked" },
       { label: "Packaging", value: "Food-grade double polythene vacuum carton" },
-      { label: "Primary Markets", value: "🇸🇦 Saudi Arabia, 🇦🇪 UAE, 🇰🇼 Kuwait, 🇶🇦 Qatar, 🇯🇴 Jordan" }
+      { label: "Primary Markets", value: "Saudi Arabia, UAE, Kuwait, Qatar, Jordan" }
     ],
     whyChoose: `
       <p>Alleppey Green Cardamom holds global prestige across the Arabian Gulf, revered for its robust cineole aroma, uniform capsule girth, and vibrant natural green shade.</p>
       <p>Vexport maintains temperature-regulated curing chambers in Kerala that preserve the pods' volatile aromatic oils without discoloration or moisture retention.</p>
-      <p>Every batch is screen-calibrated into 7mm–8mm Extra Bold (AGEB) and 8.5mm+ Jumbo pods, packed in airtight vapor-barrier poly liners inside heavy 5-ply cartons to arrive in pristine condition.</p>
+      <p>Every batch is screen-calibrated into 7mm-8mm Extra Bold (AGEB) and 8.5mm+ Jumbo pods, packed in airtight vapor-barrier poly liners inside heavy 5-ply cartons to arrive in pristine condition.</p>
     `,
     packagingOptions: [
       { name: "5kg & 10kg Export Cartons", desc: "Vapor-barrier food-grade vacuum bag inside", icon: "bi-box-seam" },
@@ -165,8 +165,8 @@ const VEXPORT_PRODUCTS_DATA = {
       { name: "Custom Retail Tin Cans", desc: "100g, 250g, 500g tin containers with tamper seal", icon: "bi-tags" }
     ],
     faqs: [
-      { q: "What pod sizes are available?", a: "We supply 6mm–7mm (Small Medium), 7mm–8mm (Bold AGB), and 8mm–8.5mm+ (Extra Bold AGEB Jumbo)." },
-      { q: "Can cardamom be dispatched via Air Freight?", a: "Yes. For GCC markets (Riyadh, Dubai, Kuwait), we arrange door-to-airport customs-cleared air shipments within 48–72 hours." }
+      { q: "What pod sizes are available?", a: "We supply 6mm-7mm (Small Medium), 7mm-8mm (Bold AGB), and 8mm-8.5mm+ (Extra Bold AGEB Jumbo)." },
+      { q: "Can cardamom be dispatched via Air Freight?", a: "Yes. For GCC markets (Riyadh, Dubai, Kuwait), we arrange door-to-airport customs-cleared air shipments within 48-72 hours." }
     ],
     related: ["sangli-turmeric", "cloves", "malabar-black-pepper", "fennel-seeds"]
   },
@@ -176,7 +176,7 @@ const VEXPORT_PRODUCTS_DATA = {
     name: "Guntur S17 Teja Red Chilli",
     category: "Indian Spices",
     categoryIcon: "bi-fire",
-    badge: "High Heat 75k–100k SHU",
+    badge: "High Heat 75k-100k SHU",
     availability: "Available Now",
     shortDesc: "Fiery, sun-dried Guntur Teja S17 red chillies. Available Stemless and With Stem. Bright natural red, moisture controlled under 10% for high oleoresin extraction.",
     mainImage: "assets/images/red-chilli.jpg",
@@ -189,9 +189,9 @@ const VEXPORT_PRODUCTS_DATA = {
     quickFacts: {
       availability: "Immediate Dispatch",
       origin: "Guntur & Prakasam (Andhra Pradesh)",
-      moq: "1 × 40ft HQ Container (14 MT Bales)",
+      moq: "1 x 40ft HQ Container (14 MT Bales)",
       hsCode: "0904 21 10 / 0904 21 20",
-      season: "Fresh Crop: Jan–May (Stored in Cold Storage Year-Round)",
+      season: "Fresh Crop: Jan-May (Stored in Cold Storage Year-Round)",
       packaging: "25kg / 50kg Jute Bales or Poly Bags"
     },
     fullSpecs: [
@@ -203,14 +203,14 @@ const VEXPORT_PRODUCTS_DATA = {
       { label: "Loose Seeds Rate", value: "Less than 2.0%" },
       { label: "Damaged / Discolored", value: "Max 1.5%" },
       { label: "Aflatoxin / Ochratoxin", value: "Strictly below EU / US FDA limits" },
-      { label: "Major Buyers", value: "🇨🇳 China, 🇲🇾 Malaysia, 🇮🇩 Indonesia, 🇦🇪 UAE, 🇱🇰 Sri Lanka" }
+      { label: "Major Buyers", value: "China, Malaysia, Indonesia, UAE, Sri Lanka" }
     ],
     whyChoose: `
       <p>Guntur in Andhra Pradesh is Asia's largest chilli trading center. Vexport procures direct from contract farmers and cold-chain yards in Guntur to deliver prime Teja S17 chillies with blazing pungency.</p>
       <p>Whether for oleoresin extraction, hot sauce manufacturing, or wholesale repackaging, our chillies are mechanically graded and sun-cured with strict moisture control under 10% to prevent transit blackening or mold.</p>
     `,
     packagingOptions: [
-      { name: "Compressed Jute Bales (25kg–50kg)", desc: "Hydraulic compressed for maximized container space", icon: "bi-bag" },
+      { name: "Compressed Jute Bales (25kg-50kg)", desc: "Hydraulic compressed for maximized container space", icon: "bi-bag" },
       { name: "Non-Compressed Poly Bags", desc: "Maintains pod shape for premium spice markets", icon: "bi-bag-check" }
     ],
     faqs: [
@@ -232,9 +232,9 @@ const VEXPORT_PRODUCTS_DATA = {
     quickFacts: {
       availability: "In Stock",
       origin: "Unjha (Gujarat)",
-      moq: "1 × 20ft Container (13 MT)",
+      moq: "1 x 20ft Container (13 MT)",
       hsCode: "0909 31 19 / 0909 31 29",
-      season: "Fresh Crop: Mar–Jun (Year-Round)",
+      season: "Fresh Crop: Mar-Jun (Year-Round)",
       packaging: "25kg / 50kg PP Woven or Paper Bags"
     },
     fullSpecs: [
@@ -244,7 +244,7 @@ const VEXPORT_PRODUCTS_DATA = {
       { label: "Total Ash", value: "Max 8.0%" },
       { label: "Extraneous Matter", value: "Max 0.5% (Sortex)" },
       { label: "Flavor Profile", value: "Warm, pungent, earthy, high cuminaldehyde" },
-      { label: "Major Markets", value: "🇺🇸 USA, 🇧🇷 Brazil, 🇲🇽 Mexico, 🇦🇪 UAE, 🇪🇬 Egypt" }
+      { label: "Major Markets", value: "USA, Brazil, Mexico, UAE, Egypt" }
     ],
     whyChoose: `<p>Procured from Unjha, the global epicenter of cumin trade. Our state-of-the-art optical Sortex cleaning ensures zero weed seeds, stones, or foreign matter.</p>`,
     packagingOptions: [
@@ -252,7 +252,7 @@ const VEXPORT_PRODUCTS_DATA = {
       { name: "Multi-wall Craft Paper", desc: "Aroma retention for European buyers", icon: "bi-box-seam" }
     ],
     faqs: [
-      { q: "What is the difference between Machine Clean and Sortex Clean?", a: "Machine cleaned is 98%–99% pure. Sortex clean passes through optical cameras to remove discolored seeds, achieving 99.5%–99.8% purity." }
+      { q: "What is the difference between Machine Clean and Sortex Clean?", a: "Machine cleaned is 98%-99% pure. Sortex clean passes through optical cameras to remove discolored seeds, achieving 99.5%-99.8% purity." }
     ],
     related: ["coriander-seeds", "fennel-seeds", "fenugreek", "sangli-turmeric"]
   },
@@ -270,9 +270,9 @@ const VEXPORT_PRODUCTS_DATA = {
     quickFacts: {
       availability: "Ready for Dispatch",
       origin: "Kota & Ramganj Mandi (Rajasthan / MP)",
-      moq: "1 × 40ft Container (18 MT)",
+      moq: "1 x 40ft Container (18 MT)",
       hsCode: "0909 21 10 / 0909 21 90",
-      season: "Feb–May Harvest (Year-Round)",
+      season: "Feb-May Harvest (Year-Round)",
       packaging: "25kg / 40kg Jute or PP Bags"
     },
     fullSpecs: [
@@ -303,9 +303,9 @@ const VEXPORT_PRODUCTS_DATA = {
     quickFacts: {
       availability: "In Stock",
       origin: "Gujarat & Rajasthan",
-      moq: "1 × 20ft Container (13 MT)",
+      moq: "1 x 20ft Container (13 MT)",
       hsCode: "0909 61 11 / 0909 61 29",
-      season: "Harvest: Feb–Apr",
+      season: "Harvest: Feb-Apr",
       packaging: "25kg / 50kg Bags"
     },
     fullSpecs: [
@@ -332,9 +332,9 @@ const VEXPORT_PRODUCTS_DATA = {
     quickFacts: {
       availability: "In Stock",
       origin: "Kerala & Karnataka",
-      moq: "1 × 20ft Container (12 MT)",
+      moq: "1 x 20ft Container (12 MT)",
       hsCode: "0910 12 10 / 0910 12 90",
-      season: "Jan–Apr",
+      season: "Jan-Apr",
       packaging: "25kg / 50kg PP Bags"
     },
     fullSpecs: [
@@ -344,7 +344,7 @@ const VEXPORT_PRODUCTS_DATA = {
     ],
     whyChoose: `<p>Sun-cured in traditional tropical packhouses to lock in intense heat and gingerol bio-actives.</p>`,
     packagingOptions: [{ name: "25kg PP Bags", desc: "Airtight liner", icon: "bi-bag" }],
-    faqs: [{ q: "Do you supply ginger powder?", a: "Yes, available in 80–100 mesh." }],
+    faqs: [{ q: "Do you supply ginger powder?", a: "Yes, available in 80-100 mesh." }],
     related: ["sangli-turmeric", "black-pepper", "cloves", "teja-red-chilli"]
   },
 
@@ -363,7 +363,7 @@ const VEXPORT_PRODUCTS_DATA = {
       origin: "Tamil Nadu & Kerala",
       moq: "Air: 1 MT / Sea: 5 MT",
       hsCode: "0907 10 10",
-      season: "Nov–Feb",
+      season: "Nov-Feb",
       packaging: "25kg Cartons / Bags"
     },
     fullSpecs: [
@@ -390,14 +390,14 @@ const VEXPORT_PRODUCTS_DATA = {
     quickFacts: {
       availability: "Available",
       origin: "Karnataka",
-      moq: "1 × 40ft Container (12 MT)",
+      moq: "1 x 40ft Container (12 MT)",
       hsCode: "0904 21 10",
-      season: "Jan–Apr",
+      season: "Jan-Apr",
       packaging: "Jute Gunny Bales"
     },
     fullSpecs: [
       { label: "Color Value", value: "100 to 140 ASTA" },
-      { label: "Heat Level", value: "Mild (15k–25k SHU)" },
+      { label: "Heat Level", value: "Mild (15k-25k SHU)" },
       { label: "Skin Texture", value: "Deep crinkled natural skin" }
     ],
     whyChoose: `<p>Prized by color extraction laboratories and gourmet chefs for rich ruby red tint without aggressive heat.</p>`,
@@ -419,9 +419,9 @@ const VEXPORT_PRODUCTS_DATA = {
     quickFacts: {
       availability: "In Stock",
       origin: "Rajasthan",
-      moq: "1 × 20ft Container (18 MT)",
+      moq: "1 x 20ft Container (18 MT)",
       hsCode: "0910 99 12",
-      season: "Mar–May",
+      season: "Mar-May",
       packaging: "25kg / 50kg PP Bags"
     },
     fullSpecs: [
@@ -447,9 +447,9 @@ const VEXPORT_PRODUCTS_DATA = {
     quickFacts: {
       availability: "In Stock",
       origin: "Arunachal & Sourced Belts",
-      moq: "1 × 20ft Container (7 MT)",
+      moq: "1 x 20ft Container (7 MT)",
       hsCode: "0909 61 39",
-      season: "Aug–Nov",
+      season: "Aug-Nov",
       packaging: "10kg Master Cartons"
     },
     fullSpecs: [
@@ -496,7 +496,7 @@ const VEXPORT_PRODUCTS_DATA = {
       { label: "Damage / Discolored", value: "Max 0.5%" },
       { label: "Purity", value: "95% Pure Basmati (DNA Tested on request)" },
       { label: "Aging", value: "Min 12 to 24 Months Natural Aging" },
-      { label: "Major Ports", value: "🇸🇦 Dammam/Jeddah, 🇦🇪 Jebel Ali, 🇮🇶 Umm Qasr, 🇬🇧 Felixstowe, 🇺🇸 Newark" }
+      { label: "Major Ports", value: "Dammam / Jeddah (Saudi Arabia), Jebel Ali (UAE), Umm Qasr (Iraq), Felixstowe (UK), Newark (USA)" }
     ],
     whyChoose: `
       <p>Grown in the fertile Himalayan river basins of Punjab and Haryana, 1121 Basmati rice is celebrated worldwide for its unparalleled elongation and sweet aroma.</p>
@@ -528,7 +528,7 @@ const VEXPORT_PRODUCTS_DATA = {
       origin: "Madhya Pradesh & Maharashtra",
       moq: "1 Container (24 Metric Tons)",
       hsCode: "0713 20 00",
-      season: "Feb–May",
+      season: "Feb-May",
       packaging: "25kg / 50kg PP Bags"
     },
     fullSpecs: [
@@ -558,7 +558,7 @@ const VEXPORT_PRODUCTS_DATA = {
       origin: "Rajasthan & Madhya Pradesh",
       moq: "1 Container (24 MT)",
       hsCode: "0713 20 00",
-      season: "Mar–Jun",
+      season: "Mar-Jun",
       packaging: "25kg / 50kg PP Bags"
     },
     fullSpecs: [
@@ -587,7 +587,7 @@ const VEXPORT_PRODUCTS_DATA = {
       origin: "Madhya Pradesh",
       moq: "1 Container (24 MT)",
       hsCode: "0713 40 00",
-      season: "Feb–May",
+      season: "Feb-May",
       packaging: "25kg / 50kg Woven Bags"
     },
     fullSpecs: [
@@ -645,7 +645,7 @@ const VEXPORT_PRODUCTS_DATA = {
       origin: "Bihar & Karnataka",
       moq: "1 Container (25 MT)",
       hsCode: "1005 90 00",
-      season: "Oct–Dec & Mar–May",
+      season: "Oct-Dec & Mar-May",
       packaging: "50kg PP Woven Bags"
     },
     fullSpecs: [
@@ -674,7 +674,7 @@ const VEXPORT_PRODUCTS_DATA = {
       origin: "Madhya Pradesh & Gujarat",
       moq: "1 Container (26 MT)",
       hsCode: "1001 99 10",
-      season: "Apr–Jun",
+      season: "Apr-Jun",
       packaging: "50kg PP Bags"
     },
     fullSpecs: [
@@ -703,7 +703,7 @@ const VEXPORT_PRODUCTS_DATA = {
       origin: "Rajasthan & Gujarat",
       moq: "1 Container (24 MT)",
       hsCode: "1008 21 00",
-      season: "Oct–Jan",
+      season: "Oct-Jan",
       packaging: "25kg / 50kg Bags"
     },
     fullSpecs: [
@@ -737,11 +737,11 @@ const VEXPORT_PRODUCTS_DATA = {
       packaging: "5kg / 10kg / 25kg Mesh Lenom Bags"
     },
     fullSpecs: [
-      { label: "Sizes / Calibers", value: "45mm–55mm & 55mm+ Extra Bold" },
-      { label: "Skin Quality", value: "3–4 Layer Protective Dry Skin" },
+      { label: "Sizes / Calibers", value: "45mm-55mm & 55mm+ Extra Bold" },
+      { label: "Skin Quality", value: "3-4 Layer Protective Dry Skin" },
       { label: "Reefer Temperature", value: "+2°C to +4°C Controlled Atmosphere" },
       { label: "Moisture Tolerance", value: "Ventilated container packing" },
-      { label: "Major Ports", value: "🇦🇪 Dubai, 🇸🇦 Jeddah, 🇲🇾 Port Klang, 🇱🇰 Colombo, 🇧🇩 Chittagong" }
+      { label: "Major Ports", value: "Dubai (UAE), Jeddah (Saudi Arabia), Port Klang (Malaysia), Colombo (Sri Lanka), Chittagong (Bangladesh)" }
     ],
     whyChoose: `<p>Located in the heart of Nashik's Lasalgaon onion market, Vexport grades only sound, dry, thick-skinned onions pre-cooled for zero sprouting during marine transit.</p>`,
     packagingOptions: [
@@ -767,13 +767,13 @@ const VEXPORT_PRODUCTS_DATA = {
     quickFacts: {
       availability: "Harvest Ready",
       origin: "Solapur & Nashik (Maharashtra)",
-      moq: "1 Reefer Container (12–14 MT)",
+      moq: "1 Reefer Container (12-14 MT)",
       hsCode: "0810 90 10",
       season: "Year-Round",
       packaging: "3.5kg / 4kg CFB Master Cartons"
     },
     fullSpecs: [
-      { label: "Fruit Weight", value: "200g–250g, 250g–300g & 300g+" },
+      { label: "Fruit Weight", value: "200g-250g, 250g-300g & 300g+" },
       { label: "Brix Sweetness", value: "15° to 17° Brix" },
       { label: "Aril Color", value: "Deep Ruby Red with soft seeds" },
       { label: "Reefer Temp", value: "+6°C to +7°C Controlled" }
@@ -860,7 +860,7 @@ const VEXPORT_PRODUCTS_DATA = {
       moq: "1 Container (14 MT)",
       hsCode: "0712 20 00 / 0712 90 20",
       season: "Year-Round",
-      packaging: "20kg–25kg Carton with Poly Liner"
+      packaging: "20kg-25kg Carton with Poly Liner"
     },
     fullSpecs: [
       { label: "Product Types", value: "Flakes / Kibbled, Minced, Granules & Powder" },
@@ -946,11 +946,11 @@ const VEXPORT_PRODUCTS_DATA = {
       origin: "Ratnagiri & Chittoor",
       moq: "1 Container (80 Drums / 17.2 MT)",
       hsCode: "2008 99 11 / 2002 90 00",
-      season: "Peak Crop: May–Jul (Stored in Aseptic Bags)",
+      season: "Peak Crop: May-Jul (Stored in Aseptic Bags)",
       packaging: "215kg Aseptic Bag in Steel Drums"
     },
     fullSpecs: [
-      { label: "Brix Value", value: "Alphonso: 16°–18° Brix / Totapuri: 14° Brix" },
+      { label: "Brix Value", value: "Alphonso: 16°-18° Brix / Totapuri: 14° Brix" },
       { label: "Packaging Type", value: "Aseptic Bag in MS Drum (215 kg)" },
       { label: "Storage", value: "Ambient warehouse (No reefer required before opening)" }
     ],
