@@ -1,6 +1,6 @@
 /**
- * VEXPORT.CO.IN - MASTER INTERACTIVE ENGINE
- * Brand: Vexport Global Exports | Domain: vexport.co.in
+ * VEXPORT.IN - MASTER INTERACTIVE ENGINE
+ * Brand: Vexport | Domain: vexport.in
  * Responsibilities:
  *  - 3-Step Smart Produce Router
  *  - Dynamic Category & Subtab Filtering
@@ -355,7 +355,7 @@ function initPriceDrawer() {
               <div style="margin-bottom: 0.35rem;"><strong>Port of Loading:</strong> JNPT Nhava Sheva / Mundra Port</div>
               <div><strong>Documentation:</strong> Phytosanitary, Certificate of Origin, SGS Inspection ready.</div>
             </div>
-            <a href="https://wa.me/918007003698?text=${encodeURIComponent(`Hi Vexport Team, I requested rates on vexport.co.in for ${prodName} to ${destination}. Please share commercial proforma invoice.`)}" target="_blank" class="btn btn-gold btn-full">
+            <a href="https://wa.me/918007003698?text=${encodeURIComponent(`Hi Vexport Team, I requested rates on vexport.in for ${prodName} to ${destination}. Please share commercial proforma invoice.`)}" target="_blank" class="btn btn-gold btn-full">
               <i class="bi bi-whatsapp"></i> Finalize Deal on WhatsApp
             </a>
           </div>

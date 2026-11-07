@@ -1,6 +1,6 @@
-# Vexport Global Exports | Official B2B Agro & Spices Portal
+# Vexport | Official B2B Agro & Spices Portal
 
-[![Website](https://img.shields.io/badge/Website-vexport.co.in-0A3622.svg)](https://vexport.co.in)
+[![Website](https://img.shields.io/badge/Website-vexport.in-0A3622.svg)](https://vexport.in)
 [![Status](https://img.shields.io/badge/Status-Production%20Ready-success.svg)]()
 [![License](https://img.shields.io/badge/License-Proprietary-blue.svg)]()
 
@@ -77,4 +77,4 @@
 2. Click **"Add New Project"** and select `vexport-website`.
 3. Keep default settings (Framework Preset: *Other*) and click **Deploy**.
 4. In under 1 minute, your website will be live 24/7 with a free global CDN and SSL certificate.
-5. In **Settings → Domains**, add your custom domain (`vexport.co.in`).
+5. In **Settings → Domains**, add your custom domain (`vexport.in`).
