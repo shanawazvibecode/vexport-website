@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const waBtn = document.getElementById('pdWhatsAppBtn');
   const stickyWaBtn = document.getElementById('stickyWaBtn');
   const waMsg = encodeURIComponent(`Hello Vexport Team, I am an international buyer. I am looking to import a container shipment of ${p.name} (HS: ${p.quickFacts.hsCode}). Please share CIF/FOB pricing, specifications, and loading schedule.`);
-  const waUrl = `https://wa.me/918007003698?text=${waMsg}`;
+  const waUrl = `https://wa.me/919867200400?text=${waMsg}`;
 
   if (waBtn) waBtn.href = waUrl;
   if (stickyWaBtn) stickyWaBtn.href = waUrl;
